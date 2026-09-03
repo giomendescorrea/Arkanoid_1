@@ -1499,6 +1499,7 @@ GameObject:
   - component: {fileID: 443455332}
   - component: {fileID: 443455333}
   - component: {fileID: 443455334}
+  - component: {fileID: 443455335}
   m_Layer: 0
   m_Name: paddleRed_0
   m_TagString: Player
@@ -1743,6 +1744,23 @@ AudioSource:
     m_PostInfinity: 2
     m_RotationOrder: 4
 --- !u!114 &443455334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443455326}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb45e013ef654342ad7ecd487a687ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
+  moveLeft: 276
+  moveRight: 275
+  speed: 10
+  boundX: 3.22
+  source: {fileID: 0}
+--- !u!114 &443455335
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

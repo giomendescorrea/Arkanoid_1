@@ -2515,11 +2515,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 443455326}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 903e07d8d8228e14a8a7513262e1b05d, type: 3}
+  m_Script: {fileID: 11500000, guid: 7cb45e013ef654342ad7ecd487a687ec, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AutoPaddle
+  m_EditorClassIdentifier: Assembly-CSharp::Player
+  moveLeft: 276
+  moveRight: 275
   speed: 10
-  xBound: 3.22
+  boundX: 3.22
+  source: {fileID: 0}
 --- !u!1 &461036658
 GameObject:
   m_ObjectHideFlags: 0
