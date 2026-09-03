@@ -92,6 +92,12 @@ public class Ball : MonoBehaviour
             
             GameManager.Score("Brick");
             Destroy(coll.gameObject);
+
+            // Reduz 1 do contador de blocos diretamente
+            if (GameManager.instance != null)
+            {
+                GameManager.instance.BlocoDestruido();
+            }
         }
     }
 }
