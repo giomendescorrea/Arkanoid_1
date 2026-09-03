@@ -10,7 +10,7 @@ public class Ball : MonoBehaviour
     public float minVelocityThreshold = 0.5f; 
     public float nudgeForce = 2f; 
 
-    private bool hasBounced = false; // Flag para liberar o desvio apenas após rebatidas
+    private bool hasBounced = false; 
 
     void Awake()
     {
@@ -33,7 +33,6 @@ public class Ball : MonoBehaviour
 
         Vector2 currentVelocity = rb2d.linearVelocity;
 
-        // O desvio só entra em ação DEPOIS que a bola já tiver rebatedo em algo
         if (hasBounced)
         {
             if (Mathf.Abs(currentVelocity.x) < minVelocityThreshold)
@@ -54,9 +53,8 @@ public class Ball : MonoBehaviour
 
     void GoBall()
     {
-        hasBounced = false; // Permite cair reto sem sofrer o desvio do FixedUpdate
+        hasBounced = false; 
 
-        // Lança a bola perfeitamente para baixo (X = 0, Y = -1)
         Vector2 initialDir = new Vector2(0, -2);
         rb2d.linearVelocity = initialDir * speed;
     }
@@ -73,7 +71,6 @@ public class Ball : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        // Assim que tocar em qualquer objeto (Player, Brick, Parede), ativa o desvio para jogadas futuras
         hasBounced = true;
 
         if (coll.collider.CompareTag("Player"))
@@ -93,7 +90,6 @@ public class Ball : MonoBehaviour
             GameManager.Score("Brick");
             Destroy(coll.gameObject);
 
-            // Reduz 1 do contador de blocos diretamente
             if (GameManager.instance != null)
             {
                 GameManager.instance.BlocoDestruido();

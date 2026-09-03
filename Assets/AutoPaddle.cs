@@ -10,7 +10,6 @@ public class AutoPaddle : MonoBehaviour
 
     void Update()
     {
-        // Encontra a bola se ainda não tiver a referência
         if (ballTransform == null)
         {
             GameObject ball = GameObject.FindGameObjectWithTag("Ball");
@@ -18,13 +17,10 @@ public class AutoPaddle : MonoBehaviour
             return;
         }
 
-        // Define a posição alvo acompanhando apenas o X da bola
         Vector3 targetPosition = new Vector3(ballTransform.position.x, transform.position.y, transform.position.z);
         
-        // Move a nave suavemente até a posição alvo
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
 
-        // Limita o movimento dentro das paredes
         float clampedX = Mathf.Clamp(transform.position.x, -xBound, xBound);
         transform.position = new Vector3(clampedX, transform.position.y, transform.position.z);
     }
