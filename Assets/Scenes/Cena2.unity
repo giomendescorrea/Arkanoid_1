@@ -2259,10 +2259,10 @@ GameObject:
   m_Component:
   - component: {fileID: 443455330}
   - component: {fileID: 443455329}
-  - component: {fileID: 443455328}
   - component: {fileID: 443455331}
   - component: {fileID: 443455332}
   - component: {fileID: 443455333}
+  - component: {fileID: 443455334}
   m_Layer: 0
   m_Name: paddleRed_0
   m_TagString: Player
@@ -2270,23 +2270,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &443455328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 443455326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cb45e013ef654342ad7ecd487a687ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  moveLeft: 276
-  moveRight: 275
-  speed: 15
-  boundX: 3.3
-  source: {fileID: 0}
 --- !u!212 &443455329
 SpriteRenderer:
   serializedVersion: 3
@@ -2523,6 +2506,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &443455334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443455326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 903e07d8d8228e14a8a7513262e1b05d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AutoPaddle
+  speed: 10
+  xBound: 3.22
 --- !u!1 &461036658
 GameObject:
   m_ObjectHideFlags: 0
@@ -8523,7 +8520,7 @@ GameObject:
   - component: {fileID: 1351716901}
   m_Layer: 0
   m_Name: bricks
-  m_TagString: Brick
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
